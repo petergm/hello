@@ -1,0 +1,71 @@
+=== A: Total return − T-bill (≈ ES-futures), 1989-02-01 – 2026-10-09 ===
+                     CAGR    vol Sharpe max DD Calmar værste md. alpha/år alpha t
+Buy & hold          +8.1%  17.9%   0.53   -60%   0.14       -17%      NaN     NaN
+SMA10               +6.9%  12.2%   0.61   -26%   0.26       -15%    +2.6%    2.12
+TSMOM12             +8.2%  13.9%   0.64   -34%   0.24       -15%    +3.0%    2.53
+Vol-target 15%      +9.8%  17.4%   0.62   -46%   0.21       -14%    +2.4%     2.2
+SMA10 + vol-target  +8.3%  15.4%    0.6   -32%   0.26       -14%    +3.5%    2.18
+
+Sharpe pr. årti:
+           Buy & hold  SMA10  TSMOM12  Vol-target 15%  SMA10 + vol-target
+1980'erne        1.13   1.13     1.13            0.77                0.77
+1990'erne        0.91   0.61     0.93            0.92                0.65
+2000'erne       -0.05   0.49     0.23            0.01                0.42
+2010'erne        0.90   0.67     0.71            0.91                0.73
+2020'erne        0.68   0.58     0.57            0.62                0.52
+
+Afkast i krak:
+                   Dotcom Finanskrise Covid  2022
+Buy & hold           -52%        -56%  -34%  -25%
+SMA10                -14%         -5%  -12%  -16%
+TSMOM12              -17%        -12%  -34%  -13%
+Vol-target 15%       -44%        -34%  -28%  -19%
+SMA10 + vol-target   -14%         -5%  -15%  -12%
+
+Parameterfølsomhed (Sharpe; artiklernes valg: 10/12 mdr., 15% vol):
+         SMA Sharpe  TSMOM Sharpe  Vol-target Sharpe  SMA+vol Sharpe
+6 mdr.         0.57          0.47                NaN             NaN
+8 mdr.         0.63          0.56                NaN             NaN
+10 mdr.        0.62          0.63                NaN             NaN
+12 mdr.        0.64          0.64                NaN             NaN
+14 mdr.        0.62          0.61                NaN             NaN
+vol 10%         NaN           NaN               0.62             0.6
+vol 15%         NaN           NaN               0.62             0.6
+vol 20%         NaN           NaN               0.62             0.6
+
+=== B: Lang historik, kun kursafkast (uden udbytte; T-bill fra 1960), 1929-02-01 – 2026-10-09 ===
+                     CAGR    vol Sharpe max DD Calmar værste md. alpha/år alpha t
+Buy & hold          +2.9%  18.9%   0.24   -86%   0.03       -30%      NaN     NaN
+SMA10               +4.0%  12.9%   0.37   -53%   0.08       -22%    +2.8%    3.04
+TSMOM12             +3.8%  12.8%   0.35   -54%   0.07       -24%    +2.5%    2.73
+Vol-target 15%      +3.4%  17.3%   0.28   -82%   0.04       -29%    +1.2%    1.34
+SMA10 + vol-target  +4.7%  14.3%   0.39   -49%   0.09       -19%    +3.5%    3.06
+
+Sharpe pr. årti:
+           Buy & hold  SMA10  TSMOM12  Vol-target 15%  SMA10 + vol-target
+1920'erne       -0.33  -0.07    -0.43            0.04                0.12
+1930'erne        0.02   0.22     0.26           -0.16                0.20
+1940'erne        0.27   0.38     0.29            0.13                0.36
+1950'erne        1.17   1.27     1.09            1.12                1.15
+1960'erne        0.08   0.06    -0.01           -0.08               -0.06
+1970'erne       -0.28   0.04     0.05           -0.36               -0.05
+1980'erne        0.26   0.25     0.20            0.32                0.34
+1990'erne        0.73   0.45     0.65            0.71                0.46
+2000'erne       -0.14   0.40     0.25           -0.09                0.31
+2010'erne        0.76   0.53     0.47            0.76                0.58
+2020'erne        0.61   0.49     0.51            0.54                0.43
+
+Afkast i krak:
+                   1987 krak Dotcom Finanskrise Covid  2022
+Buy & hold              -34%   -54%        -57%  -34%  -26%
+SMA10                   -25%   -15%         -5%  -12%  -16%
+TSMOM12                 -25%   -10%         -6%  -34%  -13%
+Vol-target 15%          -25%   -45%        -36%  -28%  -20%
+SMA10 + vol-target      -23%   -14%         -6%  -15%  -13%
+
+Seneste signal (beregnet 2026-10-09; endeligt ved månedsafslutning):
+Buy & hold            1.00
+SMA10                 1.00
+TSMOM12               1.00
+Vol-target 15%        1.38
+SMA10 + vol-target    1.38

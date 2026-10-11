@@ -2,6 +2,32 @@ Basis-momentum pr. 2026-10-11  (data til og med 2026-09)
 
 Ingen råvarer har endnu fulde 12 måneders kontrakthistorik.
 
+PROXY (indtil historikken er bygget op): BM på dagens front/2. kontrakt holdt fast i 12 måneder. Ikke artiklens præcise signal.
+signal symbol         navn  proxy_pct front anden
+  LANG     RB  Benzin RBOB       6.93 RBZ26 RBF27
+  LANG     HO  Fyringsolie       5.97 HOZ26 HOF27
+  LANG     CL   Råolie WTI       2.70 CLZ26 CLF27
+  LANG     HE         Svin       2.60 HEZ26 HEG27
+     -     KC        Kaffe       1.05 KCZ26 KCH27
+     -     SB       Sukker       1.03 SBH27 SBK27
+     -     KE     KC-hvede       1.00 KEZ26 KEH27
+     -     ZM     Sojaskrå       0.72 ZMZ26 ZMF27
+     -     ZW        Hvede       0.20 ZWZ26 ZWH27
+     -     ZC         Majs      -0.06 ZCZ26 ZCH27
+     -     GC         Guld      -0.27 GCZ26 GCG27
+     -     SI         Sølv      -0.48 SIZ26 SIH27
+     -     ZL     Sojaolie      -0.50 ZLZ26 ZLF27
+     -     PA    Palladium      -0.58 PAZ26 PAH27
+     -     ZS   Sojabønner      -0.58 ZSF27 ZSH27
+     -     PL       Platin      -0.93 PLF27 PLJ27
+     -     HG       Kobber      -1.08 HGZ26 HGH27
+ SHORT     LE Levende kvæg      -1.56 LEZ26 LEG27
+ SHORT     CC        Kakao      -2.60 CCZ26 CCH27
+ SHORT     CT       Bomuld      -3.51 CTZ26 CTH27
+ SHORT     NG     Naturgas      -4.15 NGZ26 NGF27
+
+21 råvarer med proxy. Lang top-4, short bund-4.
+
 Delvis historik (BM over færre end 12 måneder – kun vejledende, ikke artiklens signal):
 symbol         navn  BM_pct  mdr front anden                                                          note
     ZM     Sojaskrå    2.10    1 ZMZ26 ZMF27  1m-afkast front +5.5%; mangler ZMU26/ZMV26 i 2026-07–2026-08

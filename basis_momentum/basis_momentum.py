@@ -195,13 +195,28 @@ def basis_momentum(sym, today):
     return bm, n, note
 
 
+def basis_momentum_proxy(sym, today):
+    """Proxy, når udløbne kontrakter mangler: BM på DAGENS C1/C2-par, holdt fast over de seneste
+    LOOKBACK måneder. Samme formel, men med længere løbetid tidligt i perioden end i artiklen."""
+    last = pd.Period(today, "M") - 1
+    t0 = last - LOOKBACK
+    (y1, m1), (y2, m2) = nearby_pair(sym, pd.Timestamp(today))
+    a, b = monthly_closes(ticker(sym, y1, m1)), monthly_closes(ticker(sym, y2, m2))
+    try:
+        return (a[last] / a[t0]) - (b[last] / b[t0])
+    except KeyError:
+        return np.nan
+
+
 def rank(today, out=None):
     rows = []
     for sym in UNIVERSE:
         bm, n, note = basis_momentum(sym, today)
+        proxy = basis_momentum_proxy(sym, today)
         (y1, m1), (y2, m2) = nearby_pair(sym, pd.Timestamp(today))
         rows.append(dict(symbol=sym, navn=UNIVERSE[sym][2],
                          BM_pct=None if np.isnan(bm) else round(bm * 100, 2), mdr=n,
+                         proxy_pct=None if np.isnan(proxy) else round(proxy * 100, 2),
                          front=ticker(sym, y1, m1).split(".")[0], anden=ticker(sym, y2, m2).split(".")[0],
                          note=note))
     df = pd.DataFrame(rows)
@@ -225,6 +240,17 @@ def rank(today, out=None):
                      "ligevægtet, rebalancér månedligt.")
     else:
         lines.append(f"Ingen råvarer har endnu fulde {LOOKBACK} måneders kontrakthistorik.")
+        px = df.dropna(subset=["proxy_pct"]).sort_values("proxy_pct", ascending=False).reset_index(drop=True)
+        m = len(px)
+        kp = min(4, m // 2) if m >= 16 else m // 4
+        px["signal"] = "-"
+        if kp:
+            px.loc[:kp - 1, "signal"] = "LANG"
+            px.loc[m - kp:, "signal"] = "SHORT"
+        lines.append(f"\nPROXY (indtil historikken er bygget op): BM på dagens front/2. kontrakt holdt fast i "
+                     f"{LOOKBACK} måneder. Ikke artiklens præcise signal.")
+        lines.append(px[["signal", "symbol", "navn", "proxy_pct", "front", "anden"]].to_string(index=False))
+        lines.append(f"\n{m} råvarer med proxy. Lang top-{kp}, short bund-{kp}.")
     if len(part):
         lines.append(f"\nDelvis historik (BM over færre end {LOOKBACK} måneder – kun vejledende, ikke artiklens signal):")
         lines.append(part[["symbol", "navn", "BM_pct", "mdr", "front", "anden", "note"]].to_string(index=False))

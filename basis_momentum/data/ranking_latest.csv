@@ -1,23 +1,23 @@
-symbol,navn,BM_pct,mdr,front,anden,note
-CL,Råolie WTI,,0,CLZ26,CLF27,mangler CLV26/CLX26 i 2026-08–2026-09
-HO,Fyringsolie,,0,HOZ26,HOF27,mangler HOV26/HOX26 i 2026-08–2026-09
-RB,Benzin RBOB,,0,RBZ26,RBF27,mangler RBV26/RBX26 i 2026-08–2026-09
-NG,Naturgas,,0,NGZ26,NGF27,mangler NGV26/NGX26 i 2026-08–2026-09
-PL,Platin,-0.17,3,PLF27,PLJ27,3m-afkast front +8.7%; mangler PLN26/PLV26 i 2026-05–2026-06
-PA,Palladium,-0.14,1,PAZ26,PAH27,1m-afkast front -12.0%; mangler PAU26/PAZ26 i 2026-07–2026-08
-HG,Kobber,-0.09,1,HGZ26,HGH27,1m-afkast front -1.0%; mangler HGU26/HGZ26 i 2026-07–2026-08
-GC,Guld,-0.0,2,GCZ26,GCG27,2m-afkast front +1.9%; mangler GCQ26/GCV26 i 2026-06–2026-07
-SI,Sølv,-0.08,1,SIZ26,SIH27,1m-afkast front -9.6%; mangler SIU26/SIZ26 i 2026-07–2026-08
-ZC,Majs,-0.23,1,ZCZ26,ZCH27,1m-afkast front -6.9%; mangler ZCU26/ZCZ26 i 2026-07–2026-08
-ZS,Sojabønner,-0.07,1,ZSF27,ZSH27,1m-afkast front +0.4%; mangler ZSU26/ZSX26 i 2026-07–2026-08
-ZW,Hvede,-0.32,1,ZWZ26,ZWH27,1m-afkast front -12.7%; mangler ZWU26/ZWZ26 i 2026-07–2026-08
-KE,KC-hvede,-0.22,1,KEZ26,KEH27,1m-afkast front -12.5%; mangler KEU26/KEZ26 i 2026-07–2026-08
-ZL,Sojaolie,-0.21,1,ZLZ26,ZLF27,1m-afkast front -4.2%; mangler ZLU26/ZLV26 i 2026-07–2026-08
-ZM,Sojaskrå,2.1,1,ZMZ26,ZMF27,1m-afkast front +5.5%; mangler ZMU26/ZMV26 i 2026-07–2026-08
-LE,Levende kvæg,-1.9,2,LEZ26,LEG27,2m-afkast front -3.8%; mangler LEQ26/LEV26 i 2026-06–2026-07
-HE,Svin,1.04,2,HEZ26,HEG27,2m-afkast front -7.2%; mangler HEQ26/HEV26 i 2026-06–2026-07
-GF,Fodringskvæg,-1.57,1,GFF27,GFH27,1m-afkast front +6.1%; mangler GFU26/GFV26 i 2026-07–2026-08
-KC,Kaffe,-1.11,1,KCZ26,KCH27,1m-afkast front -6.7%; mangler KCU26/KCZ26 i 2026-07–2026-08
-SB,Sukker,,0,SBH27,SBK27,mangler SBV26/SBH27 i 2026-08–2026-09
-CT,Bomuld,-4.47,5,CTZ26,CTH27,5m-afkast front -12.4%; mangler CTK26/CTN26 i 2026-03–2026-04
-CC,Kakao,-0.01,1,CCZ26,CCH27,1m-afkast front -20.7%; mangler CCU26/CCZ26 i 2026-07–2026-08
+symbol,navn,BM_pct,mdr,proxy_pct,front,anden,note
+CL,Råolie WTI,,0,2.7,CLZ26,CLF27,mangler CLV26/CLX26 i 2026-08–2026-09
+HO,Fyringsolie,,0,5.97,HOZ26,HOF27,mangler HOV26/HOX26 i 2026-08–2026-09
+RB,Benzin RBOB,,0,6.93,RBZ26,RBF27,mangler RBV26/RBX26 i 2026-08–2026-09
+NG,Naturgas,,0,-4.15,NGZ26,NGF27,mangler NGV26/NGX26 i 2026-08–2026-09
+PL,Platin,-0.17,3,-0.93,PLF27,PLJ27,3m-afkast front +8.7%; mangler PLN26/PLV26 i 2026-05–2026-06
+PA,Palladium,-0.14,1,-0.58,PAZ26,PAH27,1m-afkast front -12.0%; mangler PAU26/PAZ26 i 2026-07–2026-08
+HG,Kobber,-0.09,1,-1.08,HGZ26,HGH27,1m-afkast front -1.0%; mangler HGU26/HGZ26 i 2026-07–2026-08
+GC,Guld,-0.0,2,-0.27,GCZ26,GCG27,2m-afkast front +1.9%; mangler GCQ26/GCV26 i 2026-06–2026-07
+SI,Sølv,-0.08,1,-0.48,SIZ26,SIH27,1m-afkast front -9.6%; mangler SIU26/SIZ26 i 2026-07–2026-08
+ZC,Majs,-0.23,1,-0.06,ZCZ26,ZCH27,1m-afkast front -6.9%; mangler ZCU26/ZCZ26 i 2026-07–2026-08
+ZS,Sojabønner,-0.07,1,-0.58,ZSF27,ZSH27,1m-afkast front +0.4%; mangler ZSU26/ZSX26 i 2026-07–2026-08
+ZW,Hvede,-0.32,1,0.2,ZWZ26,ZWH27,1m-afkast front -12.7%; mangler ZWU26/ZWZ26 i 2026-07–2026-08
+KE,KC-hvede,-0.22,1,1.0,KEZ26,KEH27,1m-afkast front -12.5%; mangler KEU26/KEZ26 i 2026-07–2026-08
+ZL,Sojaolie,-0.21,1,-0.5,ZLZ26,ZLF27,1m-afkast front -4.2%; mangler ZLU26/ZLV26 i 2026-07–2026-08
+ZM,Sojaskrå,2.1,1,0.72,ZMZ26,ZMF27,1m-afkast front +5.5%; mangler ZMU26/ZMV26 i 2026-07–2026-08
+LE,Levende kvæg,-1.9,2,-1.56,LEZ26,LEG27,2m-afkast front -3.8%; mangler LEQ26/LEV26 i 2026-06–2026-07
+HE,Svin,1.04,2,2.6,HEZ26,HEG27,2m-afkast front -7.2%; mangler HEQ26/HEV26 i 2026-06–2026-07
+GF,Fodringskvæg,-1.57,1,,GFF27,GFH27,1m-afkast front +6.1%; mangler GFU26/GFV26 i 2026-07–2026-08
+KC,Kaffe,-1.11,1,1.05,KCZ26,KCH27,1m-afkast front -6.7%; mangler KCU26/KCZ26 i 2026-07–2026-08
+SB,Sukker,,0,1.03,SBH27,SBK27,mangler SBV26/SBH27 i 2026-08–2026-09
+CT,Bomuld,-4.47,5,-3.51,CTZ26,CTH27,5m-afkast front -12.4%; mangler CTK26/CTN26 i 2026-03–2026-04
+CC,Kakao,-0.01,1,-2.6,CCZ26,CCH27,1m-afkast front -20.7%; mangler CCU26/CCZ26 i 2026-07–2026-08

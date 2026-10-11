@@ -131,7 +131,7 @@ def needed_contracts(sym, today):
         t0 = last - k
         for y, m in listed_after(sym, t0.to_timestamp(how="end"), 2):
             tks.add(ticker(sym, y, m))
-    for y, m in listed_after(sym, pd.Timestamp(today), 4):
+    for y, m in listed_after(sym, pd.Timestamp(today), 8):     # længere ude = længere historik til backtest
         tks.add(ticker(sym, y, m))
     return sorted(tks)
 
@@ -142,7 +142,7 @@ def fetch(today):
     ok = miss = 0
     for sym in UNIVERSE:
         for tk in needed_contracts(sym, today):
-            s = download_daily(tk)
+            s = download_daily(tk, period="max")
             if len(s):
                 added = save_daily(tk, s)
                 ok += 1

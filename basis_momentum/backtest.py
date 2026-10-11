@@ -2,6 +2,7 @@
 Backtest af basis-momentum på de gemte kontraktkurser i data/contracts/.
 
     python backtest.py [lookback-måneder ...]      # standard: 12 6 3
+    MIN_N=12 python backtest.py                    # kræv mindst 12 råvarer pr. måned (standard)
 
 Begrænsning: Yahoo har kun kurser for kontrakter, der stadig handles. Ved hver månedsafslutning t
 vælges derfor C1 = den nærmeste kontrakt med levering >= t + 2 måneder, som har kurser for hele
@@ -13,6 +14,7 @@ lang top-k / short bund-k ligevægtet (k = 4, eller n//4 ved færre end 16 råva
 Afkast t -> t+1 måles på C1 (samme kontrakt), ingen omkostninger.
 Spread-versionen holder C1-C2 i stedet (lang front/short 2. i LANG, omvendt i SHORT).
 """
+import os
 import sys
 from pathlib import Path
 
@@ -22,6 +24,7 @@ import pandas as pd
 from basis_momentum import MCODE, STORE, UNIVERSE, load_daily
 
 HERE = Path(__file__).resolve().parent
+MIN_N = int(os.environ.get("MIN_N", 12))   # færre råvarer giver for tynd en rangering
 
 
 def load_contracts():
@@ -67,7 +70,7 @@ def run(L, data):
             r2 = b[t + 1] / b[t] - 1
             sig[sym] = (bm, r1, r2, d1, d2)
         n = len(sig)
-        if n < 4:
+        if n < max(4, MIN_N):
             continue
         k = min(4, n // 2) if n >= 16 else max(1, n // 4)
         order = sorted(sig, key=lambda s: sig[s][0], reverse=True)
@@ -99,6 +102,7 @@ def stats(r):
 def main():
     lookbacks = [int(x) for x in sys.argv[1:]] or [12, 6, 3]
     data = load_contracts()
+    print(f"Mindst {MIN_N} råvarer pr. måned.")
     print(f"Kontrakter i datalageret: {sum(len(v) for v in data.values())} "
           f"({', '.join(f'{s}:{len(v)}' for s, v in data.items())})\n")
     lines = []
@@ -114,6 +118,8 @@ def main():
         st = pd.DataFrame({c: stats(res[c]) for c in ["LS", "spread", "ew_lang"]}).T
         st.index = ["Lang/short (C1)", "Spread (C1-C2)", "Ligevægtet lang alle"]
         lines.append(st.to_string())
+        yr = res.assign(aar=res.maaned.str[:4]).groupby("aar")[["LS", "spread", "ew_lang"]].apply(lambda d: (1 + d).prod() - 1)
+        lines.append("\nPr. år:\n" + yr.map(lambda x: f"{x:+.1%}").to_string())
         lines.append("")
         res.to_csv(HERE / "data" / f"backtest_L{L}.csv", index=False)
         picks.to_csv(HERE / "data" / f"backtest_L{L}_positioner.csv", index=False)

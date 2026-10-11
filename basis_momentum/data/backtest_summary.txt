@@ -1,21 +1,41 @@
 === Lookback 12 måneder ===
-Periode 2025-11 – 2026-09, 18–21 råvarer pr. måned, gns. 8 mdr. til levering for C1
+Periode 2025-01 – 2026-09, 12–21 råvarer pr. måned, gns. 11 mdr. til levering for C1
                      mdr  samlet  aarlig    vol sharpe t_stat  hit  max_dd
-Lang/short (C1)       11  +29.6%  +32.7%  34.1%    1.0   0.95  64%  -17.8%
-Spread (C1-C2)        11   +3.6%   +4.0%   3.9%   1.01   0.97  73%   -1.3%
-Ligevægtet lang alle  11  +21.2%  +23.3%  14.7%    1.5   1.44  73%   -6.8%
+Lang/short (C1)       21  +13.5%   +7.5%  26.4%    0.4   0.53  48%  -17.8%
+Spread (C1-C2)        21   +3.2%   +1.8%   3.3%   0.56   0.73  67%   -1.9%
+Ligevægtet lang alle  21  +38.7%  +20.6%  12.3%    1.6   2.11  71%   -6.8%
+
+Pr. år:
+          LS spread ew_lang
+aar                        
+2025   -8.2%  -0.0%  +18.1%
+2026  +23.7%  +3.2%  +17.4%
 
 === Lookback 6 måneder ===
-Periode 2025-05 – 2026-09, 18–22 råvarer pr. måned, gns. 10 mdr. til levering for C1
+Periode 2024-07 – 2026-09, 12–22 råvarer pr. måned, gns. 14 mdr. til levering for C1
                      mdr  samlet  aarlig    vol sharpe t_stat  hit  max_dd
-Lang/short (C1)       17  +59.5%  +39.0%  27.5%   1.34    1.6  65%  -16.8%
-Spread (C1-C2)        17   +1.7%   +1.2%   3.8%   0.33    0.4  59%   -1.9%
-Ligevægtet lang alle  17  +28.7%  +19.5%  10.6%   1.73   2.06  76%   -6.5%
+Lang/short (C1)       27  +81.7%  +30.4%  22.7%   1.29   1.93  63%  -16.8%
+Spread (C1-C2)        27   +1.9%   +0.8%   3.2%   0.28   0.42  56%   -2.8%
+Ligevægtet lang alle  27  +29.9%  +12.3%  10.4%   1.18   1.76  63%   -6.5%
+
+Pr. år:
+          LS spread ew_lang
+aar                        
+2024  +11.7%  +0.5%   -3.2%
+2025  +19.8%  -1.1%  +18.2%
+2026  +35.8%  +2.5%  +13.6%
 
 === Lookback 3 måneder ===
-Periode 2025-02 – 2026-09, 18–22 råvarer pr. måned, gns. 11 mdr. til levering for C1
+Periode 2024-04 – 2026-09, 12–22 råvarer pr. måned, gns. 15 mdr. til levering for C1
                      mdr  samlet  aarlig    vol sharpe t_stat  hit  max_dd
-Lang/short (C1)       20  +33.2%  +18.8%  21.0%   0.92   1.19  60%  -15.8%
-Spread (C1-C2)        20   -4.8%   -2.9%   3.2%   -0.9  -1.16  35%   -4.7%
-Ligevægtet lang alle  20  +26.5%  +15.2%  10.8%   1.37   1.77  70%   -6.5%
+Lang/short (C1)       30  +50.6%  +17.8%  18.3%   0.99   1.56  67%  -15.8%
+Spread (C1-C2)        30   -4.5%   -1.8%   2.8%  -0.65  -1.03  43%   -5.1%
+Ligevægtet lang alle  30  +29.6%  +10.9%  10.0%   1.09   1.72  63%   -6.5%
+
+Pr. år:
+          LS spread ew_lang
+aar                        
+2024  +11.9%  -0.2%   -2.3%
+2025  +16.0%  -2.6%  +16.9%
+2026  +16.0%  -1.8%  +13.5%
 

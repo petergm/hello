@@ -1,0 +1,40 @@
+name: Basis-momentum data
+
+on:
+  push:
+    branches: [claude/new-session-lmpuzq]
+    paths:
+      - basis_momentum/basis_momentum.py
+      - .github/workflows/basis-momentum.yml
+  schedule:
+    - cron: "17 22 * * 1-5"   # hverdage efter lukning i USA
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: basis-momentum
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install yfinance pandas numpy
+      - name: Hent kontraktkurser
+        run: python basis_momentum/basis_momentum.py fetch
+      - name: Ranger
+        run: python basis_momentum/basis_momentum.py rank basis_momentum/data/ranking_latest.txt
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git add basis_momentum/data
+          git diff --cached --quiet && exit 0
+          git commit -m "Basis-momentum: data $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
